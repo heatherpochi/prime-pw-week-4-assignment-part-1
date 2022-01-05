@@ -83,7 +83,7 @@ function find( value, array ){
 
 let numbers = [ 0.1, 3, 59, 7899, 5, 67]
 
-find( 59, numbers);
+find( 3, numbers);
 
 // ----------------------
 // Stretch Goals
@@ -118,15 +118,15 @@ function sumAll(array) {
 //     return an empty array. Note: The input array should not change.
 
 let positiveNumbers = [ ];
-let inputArray = [5, -8, 9, -6, -11, 7]
+let inputArray = [5, -0.1, 97, -87, 153, 0.1]
 
 function positive(array){
   for(let i = 0; i < array.length; i++){
     if(array[i] > 0){
       positiveNumbers.push(array[i]);
     }
-  return positiveNumbers;
   }
+  return positiveNumbers;
 };
 
 console.log(positive(inputArray));
