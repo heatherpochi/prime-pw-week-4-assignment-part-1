@@ -135,3 +135,17 @@ console.log(positive(inputArray));
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+//Create a function that takes a "base number" as an argument.
+//This function should return another function which takes a new argument,
+//and returns the sum of the "base number" and the new argument.
+
+ function makePlusFunction(baseNum){
+   return function (baseTwo){
+     return baseNum + baseTwo;
+   };
+ }
+
+let addTwo = makePlusFunction(2);
+
+console.log(addTwo(10));
