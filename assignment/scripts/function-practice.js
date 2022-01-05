@@ -70,19 +70,20 @@ console.log(getLast(veggies));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
+
 function find( value, array ){
   for (let i = 0; i < array.length; i++){
     if(array[i] === value){
-      return true;
+      console.log(true);
     } else{
-      return false;
+      console.log(false);
     }
   }
 };
 
 let numbers = [ 0.1, 3, 59, 7899, 5, 67]
 
-console.log(find( 59, numbers));
+find( 59, numbers);
 
 // ----------------------
 // Stretch Goals
@@ -122,7 +123,7 @@ let inputArray = [5, -8, 9, -6, -11, 7]
 function positive(array){
   for(let i = 0; i < array.length; i++){
     if(array[i] > 0){
-      return positiveNumbers.push(array[i]);
+      positiveNumbers.push(array[i]);
     }
   return positiveNumbers;
   }
