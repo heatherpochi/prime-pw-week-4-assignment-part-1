@@ -72,18 +72,19 @@ console.log(getLast(veggies));
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 
 function find( value, array ){
+  let found;
   for (let i = 0; i < array.length; i++){
     if(array[i] === value){
-      console.log(true);
+      found = true;
     } else{
-      console.log(false);
+      found = false;
     }
   }
+  return found;
 };
 
 let numbers = [ 0.1, 3, 59, 7899, 5, 67]
-
-find( 3, numbers);
+console.log(find(0.1, numbers));
 
 // ----------------------
 // Stretch Goals
