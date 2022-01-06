@@ -26,7 +26,7 @@ function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
 }
 
-console.log(addNumbers(6,7));
+console.log('Expecting 13',addNumbers(6,7));
 
 
 // 4. Function to multiply three numbers & return the result
@@ -34,16 +34,17 @@ function multiplyThree( firstNumber, secondNumber, thirdNumber ){
   return firstNumber * secondNumber * thirdNumber;
 }
 
-console.log(multiplyThree( 6, 309, 3));
+console.log('Expecting 5562',multiplyThree( 6, 309, 3));
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
-  if ( number > 0 ){
+  if( number > 0 ){
     return true;
-  } else
-    return false;
+  }
+  return false;
 }
+
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
@@ -54,17 +55,18 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
-  if(array.length >= 1){
+  if(array.length > 0){
     return array[array.length-1];
-  }else{
-    return 'undefined';
   }
-};
+  return 'undefined';
+}
 
 let fruits = ['apples', 'strawberries', 'pears', 'oranges', 'bananas'];
+let arrayOfNumbers = [ 4, 6, 3, 8, 10, 54];
 let veggies = [ ];
-console.log(getLast(fruits));
-console.log(getLast(veggies));
+console.log('Expecting bananas',getLast(fruits));
+console.log('Expecting 54',getLast(arrayOfNumbers));
+console.log('Expecting undefined',getLast(veggies));
 
 
 // 7. Function to find a value in an array. Return true if the
@@ -81,7 +83,9 @@ function find( value, array ){
 }
 
 let numbers = [ 0.1, 3, 59, 7899, 5, 67]
-console.log(find(100, numbers));
+console.log('find - should say false',find(100, numbers));
+console.log('find - should say true',find(7899, numbers));
+
 
 // ----------------------
 // Stretch Goals
@@ -91,9 +95,8 @@ console.log(find(100, numbers));
 function isFirstLetter(letter, string) {
   if(string.charAt(0) === letter){
     return true;
-  }else{
-    return false;
   }
+  return false;
 };
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
@@ -110,13 +113,13 @@ function sumAll(array) {
 
  let numberList = [ 1, 5, 7, 0.25, 78];
 
- console.log(sumAll(numberList));
+ console.log('Expecting 91.25',sumAll(numberList));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
 let positiveNumbers = [ ];
-let inputArray = [5, -0.1, 97, -87, 153, 0.1]
+const inputArray = [5, -0.1, 97, -87, 153, 0.1]
 
 function positive(array){
   for(let i = 0; i < array.length; i++){
@@ -146,4 +149,4 @@ console.log(positive(inputArray));
 
 let addTwo = makePlusFunction(2);
 
-console.log(addTwo(10));
+console.log('Expecting 12',addTwo(10));
